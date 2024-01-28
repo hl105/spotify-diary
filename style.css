@@ -33,6 +33,10 @@ body{
     margin-left:50px;
 }
 
+.edit {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /*content 2, describe page content*/
 
 .content2, .content3, .content4, .content5, .content6{
@@ -119,4 +123,185 @@ img{
     color: white;
     justify-content: center;
     padding: 20px;
+}
+
+.popup-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.popup-container .popup-content{
+    background-color: white;  
+    position:fixed; 
+    top: calc(10% - 25px);
+    left: calc(30% - 50px);
+    padding: 20px;
+    border-radius: 6px;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  border: none;
+  color: #1f2937;
+  font-family: monospace;
+}
+
+.popup-header {
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Optional: Adjust this based on how you want to space the items */
+}
+
+#popup-title {
+    padding-left: 0px;
+}
+
+#popup-dropdown {
+    max-width: 120px;
+    border-color:#1f2937;
+    border-width: 3px;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+header {
+  text-align: center;
+}
+
+.section {
+  padding: 1em 1em;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 1em;
+}
+
+.container-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Button Standard */
+
+.btn-main {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin-right: 40px;
+  transition: all 0.1s;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-main {
+  color: white;
+  background-color: #1f2937;
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+    font-weight: 700;
+    transform: scale(1.03);
+}
+
+ 
+
+/* Journal Entry Section */
+
+/* Title */
+
+.entry-text-title {
+  width: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 7px;
+  border-width: 2px;
+  background-color: white;
+  font-family: monospace;
+}
+
+.entry-text-title:focus {
+  outline-color: #1f2937;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.entry-text-title::placeholder {
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.entry-text-title::-ms-value {
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+/* Text Box */
+
+.container-row-journal {
+  display: flex;
+  justify-content: center;
+}
+
+.entry-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.journal-label {
+  display: block;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.entry-text-box {
+  width: 100%;
+  height: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border-width: 2px;
+  border-color: #1f2937;
+}
+
+@media (min-width: 769px) {
+    .entry-text-box {
+      width: 40em;
+      height: 20em;
+      margin: 1em auto;
+      padding: 1em;
+      border-radius: 6px;
+    }
+  }
+
+.entry-text-box::placeholder {
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+
+.buttons {
+    display: flex;
 }

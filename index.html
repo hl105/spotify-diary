@@ -10,12 +10,50 @@
 </head>
 <body>
     <div class="header">
-        <div class="title">Spotify Wrapped</div>
+        <div class="title">Johanna's Spotidiary</div>
         <div class="header-links">
             <a href="index.html">all time</a>
             <a href="winter.html">winter break</a>
             <a href="finals.html">finals season</a>
+            <button id = "popup-button" class = "btn-main edit">*add journal*</button>
         </div>
+    </div>
+    <div id="popup" class="popup-container"> 
+        <div class="popup-content">
+            <div class="popup-header">
+                <header><h1 id = "popup-title" class="title">My song diary</h1></header>
+                <select id="popup-dropdown"></select>
+                <button id="exit" class = "exit btn-main" >X</button>
+            </div>
+            <form id="entryForm" action=""> 
+                <label for="entry-title" class="journal-label">This song takes you back to</label>
+                <div>
+                    <input
+                    type="text"
+                    name="entry-title"
+                    id="entry-title"
+                    class="entry-text-title"
+                    placeholder="when you were..."
+                />
+                </div>
+                <label for="entry" class="journal-label">behind the scenes of this song</label>
+                <div>
+                    <textarea
+                    name="daily-entry"
+                    id="entry"
+                    class="entry-text-box"
+                    placeholder="why did this song make it to your top songs list?"
+                    ></textarea>
+                </div>
+                <div class = "buttons">
+                <input id = "btn-submit" class="btn-main entry-submit-btn" type="submit"> </input>
+                <input type="file" class="btn-main" accept="image/*"> 
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <div class="content2">
         <div class="title">ALL TIME TOP 25</div>
@@ -213,6 +251,8 @@
             </div>
         </div>
     </div>
-    <div class="footer">now how do I turn this into a diary</div>
+    <div class="footer">johanna's spotidiary</div>
+
+
 </body>
 </html>

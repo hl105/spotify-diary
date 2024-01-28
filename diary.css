@@ -1,0 +1,149 @@
+body{
+  height:100vh;
+  margin:0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction:column;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Header part*/
+.header{
+  display:flex;
+  justify-content: space-around;
+  background-color: #1f2937;
+  color:white;
+  align-items:center;
+}
+
+.header-links{
+  display: flex;
+}
+
+.header-links a{
+  text-decoration: none;
+  color:#E5E7EB;
+  padding:15px;
+  font-size:18px;
+}
+
+.header .title{
+  font-size: 24px;
+  color: #f9faf8;
+  margin-left:50px;
+}
+
+button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  border: none;
+  color: #1f2937;
+  font-family: monospace;
+}
+
+.btn-main {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin-right: 40px;
+  transition: all 0.1s;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  color: white;
+  background-color: #1f2937;
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+    font-weight: 700;
+    transform: scale(1.03);
+}
+
+/*content1 part */
+
+.content1{
+  display:flex;
+  justify-content: center;
+  background-color: #1f2937;
+  color:white;
+  align-items:center;
+  padding:20px;
+  height: 100%;
+}
+
+.content1 .left-box{
+  display:flex;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.content1 .maintext{
+  font-size:48px;
+  font-weight:700;
+}
+
+.content1 .text{
+  font-size:18px;
+}
+
+.content1 button{
+  width:100px;
+  height:32px;
+}
+.content1 img{
+  width: 600px;
+  height: auto;
+}
+
+.track-name {
+  padding-right: 130px;
+  padding-left:100px;
+}
+
+
+.textbox {
+  max-width: 800px; /* Example width */
+  margin: 0 auto; /* This centers the textbox if it's smaller than the full width */
+}
+
+
+@keyframes move {
+	to {
+		/* Move horizontally so that right edge is aligned against the viewport */
+		transform: translateX(calc(-100% + 100vw));
+		left: 0px;
+	}
+}
+
+#sectionPin {
+	/* Stretch it out, so that we create room for the horizontal scroll animation */
+	height: 500vh;
+	overflow: visible; /* To make position sticky work … */
+
+	view-timeline-name: --section-pin-tl;
+	view-timeline-axis: block;
+}
+
+.pin-wrap-sticky {
+	/* Stick to Top */
+	height: 100vh;
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	overflow-x: hidden;
+}
+
+.pin-wrap {
+	height: 100vh;
+	width: 250vmax;
+
+	/* Hook animation */
+	will-change: transform;
+	animation: linear move forwards;
+
+	/* Link animation to view-timeline */
+	animation-timeline: --section-pin-tl;
+	animation-range: contain 0% contain 100%;
+}

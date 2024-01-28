@@ -3,11 +3,13 @@ var page;
 var trackNames = [];
 
 document.addEventListener("DOMContentLoaded", function() {
+    path = window.location.pathname;
+    console.log(path);
     page = path.split("/").pop().split(".ht")[0];
-    if ((page != "index") && (page !="winter") && (page !="finals")){
-        page = "index"; //default to index
+    if ((page!="index") && (page!="winter") && (page!="finals")){
+        page = "index"; //default to index page
     }
-    
+
     var imageTexts = document.querySelectorAll(".image-text");
 
     imageTexts.forEach(function(imageText) {
@@ -99,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('image', reader.result);
             localStorage.setItem('albumCover', albumCover);
             localStorage.setItem('location',page+"-track"+trackNum);
+
+            console.log(localStorage);
 
             function redirectPopup(page,trackNum){
                 // Redirect to corresponding diary page

@@ -37,6 +37,30 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Button Standard */
+
+.btn-main {
+    display: block;
+    padding: 0.6rem 2rem;
+    margin-right: 40px;
+    transition: all 0.1s;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .btn-main {
+    color: white;
+    background-color: #1f2937;
+  }
+  
+  button[class^='btn-']:hover,
+  a[class^='btn-']:hover,
+  input[class^='btn-']:hover {
+      font-weight: 700;
+      transform: scale(1.03);
+  }
+
 /*content 2, describe page content*/
 
 .content2, .content3, .content4, .content5, .content6{
@@ -201,29 +225,6 @@ header {
   margin: 0 auto;
 }
 
-/* Button Standard */
-
-.btn-main {
-  display: block;
-  padding: 0.6rem 2rem;
-  margin-right: 40px;
-  transition: all 0.1s;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.btn-main {
-  color: white;
-  background-color: #1f2937;
-}
-
-button[class^='btn-']:hover,
-a[class^='btn-']:hover,
-input[class^='btn-']:hover {
-    font-weight: 700;
-    transform: scale(1.03);
-}
 
  
 

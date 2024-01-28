@@ -3,8 +3,10 @@ var page;
 var trackNames = [];
 
 document.addEventListener("DOMContentLoaded", function() {
-    path = window.location.pathname;
     page = path.split("/").pop().split(".ht")[0];
+    if (!page){
+        page = "index";
+    }
 
     var imageTexts = document.querySelectorAll(".image-text");
 
@@ -97,8 +99,6 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('image', reader.result);
             localStorage.setItem('albumCover', albumCover);
             localStorage.setItem('location',page+"-track"+trackNum);
-
-            console.log(localStorage);
 
             function redirectPopup(page,trackNum){
                 // Redirect to corresponding diary page

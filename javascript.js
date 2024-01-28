@@ -4,11 +4,12 @@ var trackNames = [];
 
 document.addEventListener("DOMContentLoaded", function() {
     path = window.location.pathname;
-    console.log(path);
     page = path.split("/").pop().split(".ht")[0];
+    /*
     if ((page!="index") && (page!="winter") && (page!="finals")){
         page = "index"; //default to index page
     }
+    */
 
     var imageTexts = document.querySelectorAll(".image-text");
 

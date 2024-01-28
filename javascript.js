@@ -4,9 +4,11 @@ var trackNames = [];
 
 document.addEventListener("DOMContentLoaded", function() {
     page = path.split("/").pop().split(".ht")[0];
+    console.log(page);
     if (!page){
         page = "index";
     }
+    console.log(page);
 
     var imageTexts = document.querySelectorAll(".image-text");
 

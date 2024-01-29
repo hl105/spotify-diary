@@ -1,4 +1,4 @@
-# Landing Page
+# spotidiary
 ## Links
 * [Playing around with my spotify data!](https://hl105.github.io/spotify-diary/)
 

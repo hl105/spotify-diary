@@ -1,6 +1,7 @@
 # spotidiary
 ## Links
 * [Playing around with my spotify data!](https://hl105.github.io/spotify-diary/)
+* Jupyter notebook contains python code for users to create their own website with their downloaded Spotify data
 
 ## About
 First full website page project. Learned to use:
